@@ -1,0 +1,116 @@
+@import "./basic-options.scss";
+
+.cards-offers {
+    color: #AAF;
+    &__container {
+        max-width: $widthContent;
+        margin: 0 auto;
+        padding-top: 102px;
+        padding-bottom: 212px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 (-$widthBetweenGrid/$widthContent*100%) -100px 0; /* Тут под вопросом -100px отступа снизу */
+    }
+    &__column {
+        @include paddingOutside;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        /*padding-right: 20px;*/
+        //padding-right: 2.083%;
+        padding-right: ($widthBetweenGrid / $widthContent*100%);
+        padding-left: 0;
+        list-style-type: none;
+    }
+    &__title {
+        max-width: 380px;
+        font-family: $fontFirst;
+        font-size: 36px;
+        line-height: 46px;
+        letter-spacing: 0.05em;
+        color: $fourthColor; /* вынести в миксины и переменные*/
+        margin-bottom: 158px;
+    }
+    &__item {
+        /*padding-left: 80px;*/
+        //padding-left: 17.4%;
+        padding-left: ($widthGrid + $widthBetweenGrid);
+        padding-bottom: 100px;
+        &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #FFFFFF;
+            box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+            border-radius: 10px;
+        }
+        &-picture-wrapper {
+            display: flex;
+            height: 197px;
+            max-width: 380px;
+            justify-content: center;
+            align-items: flex-end;
+            & img {
+                max-height: 197px;
+                background-size: cover;
+            }
+        }
+        &-text {
+            max-width: 285px;
+            padding: 48px;
+            &-title {
+                max-width: 260px;
+                font-family: $fontFirst;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: 0.05em;
+                color: $firstColor;  /* вынести в миксины и переменные*/
+            }
+            &-descriptions {
+                max-width: 284px;
+                margin-top: 16px;
+                font-family: $fontSecond;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: $firstColor;
+                opacity: 0.6;
+                margin-bottom: 32px;
+            }
+        }
+        &-more {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $thirdColor; /* Не забыть перенести в миксины */
+        }
+        &-more-text {
+            font-family: $fontSecond;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            color: $thirdColor; /* Не забыть перенести в миксины */
+            padding-right: 28px;
+            &:after {
+                background-color: $thirdColor;
+                display: block;
+                content: "";
+                height: 1px;
+                width: 0;
+                -webkit-transition: width .3s ease-in-out;
+                -moz--transition: width .3s ease-in-out;
+                transition: width .3s ease-in-out;
+            }
+            &:hover:after,
+            &:focus:after {
+                width: 100%;
+            }
+        }
+        &-more-icon{
+
+        }
+    }
+}

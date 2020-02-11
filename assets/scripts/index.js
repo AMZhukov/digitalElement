@@ -4,3 +4,4 @@ import '@styles/header.scss';
 import '@styles/hero.scss';
 import '@styles/illustration.scss';
 import '@styles/layout.css';
+import '@styles/card-offers.scss';
