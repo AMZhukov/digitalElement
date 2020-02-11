@@ -1,0 +1,80 @@
+@import "./basic-options.scss";
+
+.our-clients {
+    background: $thirdColor;
+    border-radius: 21vw 0 0 0;
+
+    &__container {
+        max-width: 940px;
+        margin: 0 auto;
+        padding-top: 100px;
+        padding-bottom: 125px;
+    }
+
+    &__headline {
+        display: flex;
+        /*flex-wrap: wrap;*/
+        box-sizing: content-box;
+        justify-content: space-between;
+        padding-bottom: 111px;
+
+        &-title {
+            max-width: 23.7%;
+            font-family: $fontFirst;
+            font-size: 36px;
+            line-height: 128%;
+            letter-spacing: 0.05em;
+            color: $secondColor;
+            /*margin-right: 10.32%;*/
+        }
+
+        &-description {
+            max-width: 57.45%;
+            font-family: $fontFirst;
+            font-size: 16px;
+            line-height: 162%;
+            letter-spacing: 0.05em;
+            color: $secondColor; /* Вынести в миксины */
+            opacity: 0.6;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        /*justify-content: space-between;*/
+    }
+    &__items {
+        width: 25%;
+        height: 128px;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        font-family: $fontFirst;
+        font-size: 20px;
+        line-height: 230%;
+        letter-spacing: 0.02em;
+        color: $secondColor;
+        &:nth-child(-n+4) {
+            border-top: none;
+        }
+        &:nth-child(4n+1) {
+            border-left: none;
+        }
+        &-link {
+            display: flex;
+            background: rgba(31, 63, 104, 0.2);
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: $secondColor;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
