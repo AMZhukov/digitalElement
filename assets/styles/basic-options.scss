@@ -1,0 +1,42 @@
+@import "./css-fonts/Galien.css";
+@import "./css-fonts/Gilroy.css";
+@import "./css-fonts/Gilroy-SemiBold.css";
+
+$fontFirst: Gilroy, Arial, sans-serif;
+$fontSecond: Gilroy-SemiBold, Arial, sans-serif;
+$fontThird: Galien, Arial, sans-serif;
+
+$firstColor: #1F3F68;
+$secondColor: #FFFFFF;
+$thirdColor: #5A98D0;
+$fourthColor: #316099;
+
+$maxWidth: 1366px;
+$widthContent: 940px;
+$widthGrid: 60px;
+$widthBetweenGrid: 20px;
+
+$widthBetweenGridPr: ($widthBetweenGrid / $widthContent * 100%);
+
+$grid1: ((1 * $widthGrid + 0 * $widthBetweenGrid) / $widthContent * 100%);
+$grid2: ((2 * $widthGrid + 1 * $widthBetweenGrid) / $widthContent * 100%);
+$grid3: ((3 * $widthGrid + 2 * $widthBetweenGrid) / $widthContent * 100%);
+$grid4: ((4 * $widthGrid + 3 * $widthBetweenGrid) / $widthContent * 100%);
+$grid5: ((5 * $widthGrid + 4 * $widthBetweenGrid) / $widthContent * 100%);
+$grid6: ((6 * $widthGrid + 5 * $widthBetweenGrid) / $widthContent * 100%);
+$grid7: ((7 * $widthGrid + 6 * $widthBetweenGrid) / $widthContent * 100%);
+$grid8: ((8 * $widthGrid + 7 * $widthBetweenGrid) / $widthContent * 100%);
+$grid9: ((9 * $widthGrid + 8 * $widthBetweenGrid) / $widthContent * 100%);
+$grid10: ((10 * $widthGrid + 9 * $widthBetweenGrid) / $widthContent * 100%);
+$grid11: ((11 * $widthGrid + 10 * $widthBetweenGrid) / $widthContent * 100%);
+$grid12: ((12 * $widthGrid + 11 * $widthBetweenGrid) / $widthContent * 100%);
+
+
+@mixin paddingOutside {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin columnNumber {
+
+}

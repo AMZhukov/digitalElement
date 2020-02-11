@@ -1,0 +1,6 @@
+@font-face {
+    font-family: Galien; /* Имя шрифта */
+    src: url('../../fonts/Galien-Regular.woff2') format('woff2'),
+    url('../../fonts/Galien-Regular.woff') format('woff'),
+    url('../../fonts/Galien-Regular.ttf') format('truetype'); /* Путь к файлу со шрифтом */
+}

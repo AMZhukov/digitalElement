@@ -1,0 +1,91 @@
+.illustration {
+    top: 8px;
+    right: 23.38px;
+    position: absolute;
+    /*display: inline;*/
+    width: max-content;
+    &__smart-home {
+        position: absolute;
+        left: 360px;
+        z-index: 20;
+        &-top {
+            width: 169px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        &-middle {
+            width: 261px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 45px;
+        }
+        &-bottom {
+            padding-top: 14px;
+            display: flex;
+            justify-content: center;
+            transform: translate(7px, 2px);
+        }
+        &-item {
+            width: 41.14px;
+            height: 30.64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6.5px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        &-house {
+            width: 88px;
+            height: 88px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(16, 112, 177, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__item{
+        &_blue {
+        background: #56CCF2;
+        }
+        &_green {
+        background: #6FCF97;
+        }
+        &_red {
+            background: #F58A8A;
+        }
+        &_yellow {
+            background: #F2C94C;
+        }
+    }
+    &__woman {
+        position: absolute;
+        top: 201px;
+        left: 500px;
+        z-index: 21;
+    }
+    &__man {
+        position: absolute;
+        top: 306px;
+        left: 79px;
+        z-index: 10;
+    }
+    &__platform {
+        position: absolute;
+        top: 251px;
+        left: 174px;
+        z-index: 20;
+    }
+    &__platform-item {
+        position: absolute;
+        top: 18px;
+        left: 109px;
+        z-index: 21;
+    }
+    &__shadow {
+        position: relative;
+        padding-top: 33px;
+    }
+}

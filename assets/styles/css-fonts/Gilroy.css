@@ -1,0 +1,5 @@
+@font-face {
+    font-family: Gilroy;
+    src: url('../../fonts/Gilroy-Regular.woff') format('woff'),
+    url('../../fonts/Gilroy-Regular.ttf') format('truetype'); /* Путь к файлу со шрифтом */
+}

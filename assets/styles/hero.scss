@@ -1,0 +1,60 @@
+@import "./basic-options.scss";
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 768px;
+    background: linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0.0) 31.12%);
+    @include paddingOutside;
+    &__container {
+        max-width: $maxWidth;
+        position: relative;
+        margin: 0 auto ;
+        padding-top: 86px;
+    }
+    &__content {
+        max-width: $widthContent;
+        width: 100%;
+        position: relative;
+        z-index: 15;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    &__title {
+        max-width: 530px;
+        font-family: $fontThird;
+        font-size: 64px;
+        line-height: 74px;
+        color: $firstColor;
+        letter-spacing: 0.05em;
+    }
+    &__description{
+        max-width: 425px;
+        margin-top: 42px;
+        font-family: $fontFirst;
+        font-size: 16px;
+        line-height: 26px;
+        color: $firstColor;
+        opacity: 0.6;
+        letter-spacing: 0.05em;
+    }
+    &__portfolio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 220px;
+        min-height: 56px;
+        margin-top: 59px;
+        border-radius: 10px;
+        background-color: $thirdColor;
+        box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+        color: $secondColor;
+        font-family: $fontFirst;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+    }
+}
