@@ -6,3 +6,4 @@ import '@styles/illustration.scss';
 import '@styles/layout.css';
 import '@styles/card-offers.scss';
 import '@styles/our-clients.scss';
+import '@styles/footer.scss';

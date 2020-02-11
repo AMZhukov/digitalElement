@@ -1,0 +1,187 @@
+@import "./basic-options.scss";
+
+.footer {
+    background-color: $thirdColor;
+    background-image: url(../images/figure.svg);
+    background-size: cover;
+    padding-top: 91px;
+    /*background-position: 50% 50%;*/
+    background-position: top 0 right 96px;
+    /*background-position: 92.97% 0;*/
+
+    background-repeat: no-repeat;
+
+    &__container {
+        /*background-color: #316099;*/
+        max-width: $widthContent;
+        margin: 0 auto;
+    }
+    &__wrapper {
+        padding-right: ($widthGrid + $widthBetweenGrid);
+    }
+    &__callback {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 93px;
+        &-content {
+            width: 48.9%;
+        }
+        &-title {
+            max-width: 320px;
+            font-family: $fontFirst;
+            font-size: 36px;
+            line-height: 128%;
+            letter-spacing: 0.05em;
+            color: $secondColor;
+            margin-bottom: 32px;
+        }
+        &-description {
+            max-width: 100%;
+            font-family: $fontFirst;
+            font-size: 16px;
+            line-height: 162%;
+            letter-spacing: 0.05em;
+            color: $secondColor;
+            opacity: 0.6;
+        }
+        &-links {
+            width: 25.58%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        &-link {
+            width: 100%;
+            font-family: $fontFirst;
+            padding: 15px 10px;
+            border-radius: 10px;
+            text-align: center;
+            background: $thirdColor;
+            color: $secondColor;
+            text-decoration: none;
+        }
+    }
+    &__middle-line {
+        background: $secondColor;
+        color: #000000;
+        position: relative;
+        font-size: 10px;
+        height: 1px;
+        opacity: 0.4;
+        content: "";
+        &:before, &:after {
+            content: "";
+            background: $secondColor;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 9999px;
+        }
+        &:before {
+            right: 100%;
+        }
+        &:after {
+            left: 100%;
+            display: none;
+        }
+    }
+    &__bottom {
+        padding-top: 105px;
+        &-wrapper {
+            display: flex;
+        }
+        &-column {
+            width: 25.58%;
+            display: flex;
+            flex-direction: column;
+            margin-left: $widthBetweenGrid;
+            &:nth-child(1) {
+                width: 44.19%;
+                margin-left: 0;
+            }
+        }
+        &-title {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 11px;
+            margin-bottom: 34px;
+        }
+        &-logo {
+            margin-right: 15px;
+            & a {
+
+            }
+        }
+        &-name-company {
+            /* Afrianska */
+            max-width: 170px;
+            font-family: $fontFirst;
+            font-size: 28px;
+            line-height: 90%;
+            letter-spacing: 0.03em;
+            color: $secondColor;
+        }
+        &-headline {
+            color: $secondColor;
+            /* About US */
+            font-family: $fontFirst;
+            font-size: 20px;
+            line-height: 150%;
+            letter-spacing: 0.05em;
+            padding-bottom: 32px;
+        }
+        &-link {
+            text-decoration: none;
+            color: $secondColor;
+            font-family: $fontFirst;
+            font-size: 16px;
+            line-height: 162%;
+            letter-spacing: 0.05em;
+            margin-bottom: 17px;
+            &:hover {
+
+            }
+        }
+        &-address {
+            font-style: initial;
+            &-item {
+                display: flex;
+                margin-bottom: 22px;
+                &-tag {
+                    /* A. */
+                    min-width: 19px;
+                    margin-right: 16px;
+
+                    font-family: $fontSecond;
+                    font-size: 16px;
+                    line-height: 162%;
+                    letter-spacing: 0.05em;
+                    /* white */
+                    color: $secondColor;
+                }
+                &-content {
+
+                    max-width: 264px;
+                    text-decoration: none;
+                    font-family: $fontFirst;
+                    font-size: 16px;
+                    line-height: 162%;
+                    letter-spacing: 0.05em;
+                    /* white */
+                    color: $secondColor;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+    &__end {
+        font-family: $fontFirst;
+        font-size: 16px;
+        line-height: 162px;
+        letter-spacing: 0.05em;
+        color: $secondColor;
+        opacity: 0.4;
+    }
+}
