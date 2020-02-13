@@ -1,0 +1,85 @@
+@import "./basic-options.scss";
+
+.contact-details {
+  width: 100%;
+  &__container {
+    max-width: $widthContent;
+    margin: 0 auto;
+  }
+  &__wrapper {
+    margin-right: -20px;
+    display: flex;
+  }
+  &__column {
+    margin-right: 20px;
+    &:nth-child(1) {
+      width: 40.43%;
+    }
+    &:nth-child(2) {
+      width: 57.45%;
+    }
+  }
+  &__item {
+    padding-top: 120px;
+  }
+  &__image {
+    max-width: 301px;
+    height: 181px;
+    margin-left: 12px;
+    background-image: url("../images/contact-us-woman.svg");
+    background-size: cover;
+  }
+  &__address {
+    padding-top: 69px;
+    font-style: initial;
+    &-item {
+      margin-bottom: 40px;
+      &-tag {
+        font-family: $fontSecond;
+        margin-bottom: 16px;
+        font-size: 20px;
+        line-height: 150%;
+        /* identical to box height, or 150% */
+        letter-spacing: 0.04em;
+        color: $firstColor;
+
+      }
+      &-content {
+        max-width: 300px;
+        display: flex;
+        padding: 9px 0 2px;
+        //margin-bottom: 2px;
+        text-decoration: none;
+        font-family: $fontFirst;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0.045em;
+        /* white */
+        color: $firstColor;
+        opacity: 0.6;
+        &:hover {
+          color: red;
+        }
+        &::before{
+          display: inline-block;
+          padding-top: 4px;
+          padding-left: 3px;
+          padding-right: 19px;
+          margin-bottom: -2px;
+        }
+        &_phone::before {
+          content: url('../images/icon-phone.svg');
+        }
+        &_internet::before {
+          content: url('../images/icon-internet.svg');
+        }
+        &_mail::before {
+          content: url('../images/icon-mail.svg');
+        }
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,74 @@
+@import "./basic-options.scss";
+
+.form {
+  margin-top: 57px;
+  margin-bottom: 96px;
+  &__wrapper {
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+  }
+  &__content {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  &__title {
+    color: $firstColor;
+    opacity: 0.8;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    font-family: $fontFirst;
+    padding-top: 57px;
+    margin-bottom: 47px;
+  }
+  &__fields {
+
+  }
+  &__field {
+    text-decoration: none;
+    display: block;
+    margin-top: 34px;
+  }
+  &__input {
+    font-family: $fontFirst;
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 187%;
+    letter-spacing: 0.04em;
+    color: $firstColor;
+    opacity: 1;
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+      padding: 25px 10px 21px 42px;
+      font-family: $fontFirst;
+      color: $firstColor;
+      opacity: 1;
+    }
+  }
+  &__input-area {
+    textarea {
+      min-height: 144px;
+      resize: none;
+    }
+  }
+  &__button {
+    width: 100%;
+    margin-top: 72px;
+    margin-bottom: 56px;
+    @include paddingOutside;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    color: $secondColor;
+    background: $thirdColor;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-family: $fontFirst;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.04em;
+    border: none;
+  }
+}

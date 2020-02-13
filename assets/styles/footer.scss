@@ -1,7 +1,6 @@
 @import "./basic-options.scss";
 
 .footer {
-    background-color: $thirdColor;
     background-image: url(../images/figure.svg);
     background-size: cover;
     padding-top: 91px;
@@ -10,7 +9,12 @@
     /*background-position: 92.97% 0;*/
 
     background-repeat: no-repeat;
-
+    &_third-color {
+        background-color: $thirdColor;
+    }
+    &_second-color {
+        background-color: $secondColor;
+    }
     &__container {
         /*background-color: #316099;*/
         max-width: $widthContent;

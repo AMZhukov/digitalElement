@@ -98,6 +98,13 @@ module.exports = {
                     collapseWhitespace: isProd
                 }
         }),
+        new HTMLWebpackPlugin({
+            filename: "page2.html",
+            template: './page2.html',
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {

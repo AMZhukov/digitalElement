@@ -1,0 +1,11 @@
+@import "./basic-options.scss";
+.maps {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  width: 100%;
+  background-color: $secondColor;
+  &__container {
+    max-width: $widthContent;
+    margin: 0 auto;
+  }
+}
