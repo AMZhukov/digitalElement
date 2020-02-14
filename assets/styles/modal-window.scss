@@ -1,0 +1,17 @@
+@mixin modal-window {
+  flex-direction: column;
+  position: fixed;
+  background-image: linear-gradient(to right, $firstColor 0%, $thirdColor 100%);
+  width: 250px;
+  z-index: 999;
+  left: -50%;
+  top: 50%;
+  transform: translate(-100%, -100%);
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  &_active-menu {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

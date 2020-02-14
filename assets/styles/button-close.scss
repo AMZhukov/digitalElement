@@ -1,0 +1,16 @@
+@mixin button-close {
+  text-align: right;
+  top: -30px;
+  padding-top: 5px;
+  padding-right: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 1000;
+  &:hover {
+    opacity: 0.5;
+  }
+  img {
+    width: 30px;
+  }
+}

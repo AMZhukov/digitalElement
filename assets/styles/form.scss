@@ -1,11 +1,15 @@
 @import "./basic-options.scss";
+@import './button-close.scss';
+@import './modal-window.scss';
 
 .form {
   margin-top: 57px;
   margin-bottom: 96px;
+
   &__wrapper {
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
+    @include paddingOutside;
   }
   &__content {
     max-width: 420px;
@@ -70,5 +74,18 @@
     line-height: 162%;
     letter-spacing: 0.04em;
     border: none;
+  }
+  &_margin-padding-none {
+    margin: 0;
+    padding: 0;
+  }
+  &_size-m {
+    max-width: 600px;
+  }
+  &_modal-window {
+    @include modal-window;
+    &-close-menu-btn {
+      @include button-close;
+    }
   }
 }

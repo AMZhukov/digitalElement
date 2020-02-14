@@ -1,19 +1,24 @@
 @import "./basic-options.scss";
 
 .footer {
-    background-image: url(../images/figure.svg);
-    background-size: cover;
+    background-color: $fourthColor;
     padding-top: 91px;
-    /*background-position: 50% 50%;*/
-    background-position: top 0 right 96px;
-    /*background-position: 92.97% 0;*/
-
     background-repeat: no-repeat;
+    @include paddingOutside;
+
     &_third-color {
-        background-color: $thirdColor;
+    }
+    @media screen and (min-width: 580px) {
+        &_third-color {
+            background-color: $thirdColor;
+        }
     }
     &_second-color {
-        background-color: $secondColor;
+    }
+    @media screen and (min-width: 580px) {
+        &_second-color {
+            background-color: $secondColor;
+        }
     }
     &__container {
         /*background-color: #316099;*/
@@ -21,14 +26,27 @@
         margin: 0 auto;
     }
     &__wrapper {
-        padding-right: ($widthGrid + $widthBetweenGrid);
+
+    }
+    @media screen and (min-width: 760px) {
+        &__wrapper {
+            padding-right: ($widthGrid + $widthBetweenGrid);
+        }
     }
     &__callback {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 93px;
+        margin-bottom: 100px;
         &-content {
-            width: 48.9%;
+            width: 80%;
+            margin-bottom: 50px;
+        }
+        @media screen and (min-width: 1100px) {
+            &-content {
+                width: 53%;
+                margin-bottom: 0;
+            }
         }
         &-title {
             max-width: 320px;
@@ -40,7 +58,7 @@
             margin-bottom: 32px;
         }
         &-description {
-            max-width: 100%;
+            width: 100%;
             font-family: $fontFirst;
             font-size: 16px;
             line-height: 162%;
@@ -49,21 +67,28 @@
             opacity: 0.6;
         }
         &-links {
-            width: 25.58%;
+            width: 100%;
             display: flex;
             justify-content: right;
             align-items: center;
         }
+        @media screen and (min-width: 1100px) {
+            &-links {
+                width: 25.58%;
+            }
+        }
         &-link {
-            width: 100%;
+            width: 220px;
             font-family: $fontFirst;
-            padding: 15px 10px;
+            padding: 19px 10px;
             border-radius: 10px;
             text-align: center;
             background: $thirdColor;
             color: $secondColor;
             text-decoration: none;
+            letter-spacing: 0.04em;
         }
+
     }
     &__middle-line {
         background: $secondColor;
@@ -90,18 +115,28 @@
         }
     }
     &__bottom {
-        padding-top: 105px;
         &-wrapper {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         &-column {
-            width: 25.58%;
+            padding-top: 96px;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            margin-left: $widthBetweenGrid;
+            //margin-left: $widthBetweenGrid;
             &:nth-child(1) {
-                width: 44.19%;
                 margin-left: 0;
+            }
+        }
+        @media screen and (min-width: 580px) {
+            &-column {
+                width: 25.58%;
+                &:nth-child(1) {
+                    width: 44.19%;
+                    //margin-left: 0;
+                }
             }
         }
         &-title {
@@ -187,5 +222,20 @@
         letter-spacing: 0.05em;
         color: $secondColor;
         opacity: 0.4;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .footer {
+        background-image: url(../images/figure.svg);
+        background-size: cover;
+        background-position: top 0 right 30px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .footer {
+        background-position: top 0 right 96px;
     }
 }

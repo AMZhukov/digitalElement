@@ -1,29 +1,35 @@
 @import "./basic-options.scss";
-
+.cards-offers__wrapper {
+    @include paddingOutside;
+}
 .cards-offers {
-    color: #AAF;
+    background-color: $secondColor;
     &__container {
         max-width: $widthContent;
         margin: 0 auto;
-        padding-top: 102px;
-        padding-bottom: 212px;
+        padding-top: 180px;
+        padding-bottom: 93px;
     }
     &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: 0 (-$widthBetweenGrid/$widthContent*100%) -100px 0; /* Тут под вопросом -100px отступа снизу */
+        margin: 0 (-$widthBetweenGrid) 0 0;
     }
     &__column {
-        @include paddingOutside;
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
         /*padding-right: 20px;*/
         //padding-right: 2.083%;
-        padding-right: ($widthBetweenGrid / $widthContent*100%);
+        padding-right: ($widthBetweenGrid);
         padding-left: 0;
         list-style-type: none;
+    }
+    @media screen and (min-width: 760px) {
+        &__column {
+            width: 50%;
+        }
     }
     &__title {
         max-width: 380px;
@@ -31,12 +37,16 @@
         font-size: 36px;
         line-height: 46px;
         letter-spacing: 0.05em;
-        color: $fourthColor; /* вынести в миксины и переменные*/
-        margin-bottom: 158px;
+        color: $fourthColor;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 760px) {
+        &__title {
+            margin-bottom: 158px;
+        }
     }
     &__item {
-        /*padding-left: 80px;*/
-        //padding-left: 17.4%;
         padding-left: ($widthGrid + $widthBetweenGrid);
         padding-bottom: 100px;
         &-container {
@@ -59,18 +69,16 @@
             }
         }
         &-text {
-            max-width: 285px;
-            padding: 48px;
+            //padding: 20px;
+            padding: 13.152%;
             &-title {
-                max-width: 260px;
                 font-family: $fontFirst;
                 font-size: 20px;
                 line-height: 30px;
-                letter-spacing: 0.05em;
+                letter-spacing: 0.02em;
                 color: $firstColor;  /* вынести в миксины и переменные*/
             }
             &-descriptions {
-                max-width: 284px;
                 margin-top: 16px;
                 font-family: $fontSecond;
                 font-size: 16px;
@@ -85,14 +93,14 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: $thirdColor; /* Не забыть перенести в миксины */
+            color: $thirdColor;
         }
         &-more-text {
             font-family: $fontSecond;
             font-size: 14px;
             line-height: 30px;
             letter-spacing: 0.05em;
-            color: $thirdColor; /* Не забыть перенести в миксины */
+            color: $thirdColor;
             padding-right: 28px;
             &:after {
                 background-color: $thirdColor;

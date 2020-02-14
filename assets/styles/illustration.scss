@@ -1,9 +1,8 @@
 .illustration {
     top: 8px;
-    right: 23.38px;
+    right: 9.38px;
     position: absolute;
-    /*display: inline;*/
-    width: max-content;
+    display: none;
     &__smart-home {
         position: absolute;
         left: 360px;
@@ -44,6 +43,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transform: translate(200%, 200%);
+            transition: 1s;
+
         }
     }
     &__item{
@@ -65,18 +67,24 @@
         top: 201px;
         left: 500px;
         z-index: 21;
+        transform: translate(200%, 200%);
+        transition: 1s;
     }
     &__man {
         position: absolute;
         top: 306px;
         left: 79px;
         z-index: 10;
+        transform: translate(-200%, -200%);
+        transition: 1s;
     }
     &__platform {
         position: absolute;
         top: 251px;
         left: 174px;
         z-index: 20;
+        transform: translate(-200%, -200%);
+        transition: 1s;
     }
     &__platform-item {
         position: absolute;
@@ -88,4 +96,12 @@
         position: relative;
         padding-top: 33px;
     }
+}
+@media screen and (min-width: 760px) {
+    .illustration {
+        display: block;
+    }
+}
+.animate {
+    transform: translate(0%, 0%);
 }

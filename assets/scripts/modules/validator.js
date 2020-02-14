@@ -21,7 +21,6 @@ class Validator{
                 e.preventDefault();
                 return;
             }
-            console.log(this.form);
             if (this.form.getAttribute("type") === 'checkbox' && !this.checked){
                 return;
             }
@@ -84,12 +83,9 @@ class Validator{
     showSuccess(elem){
         elem.classList.remove('error');
         elem.classList.add('success');
-        console.log(elem);
         //console.log (elem.nextElementSibling.tagName);
         if (elem.nextElementSibling && elem.nextElementSibling.tagName == 'LABEL') elem = elem.nextElementSibling;
-        console.log(elem);
         if (elem.nextElementSibling && elem.nextElementSibling.classList.contains('validator-error')){
-            console.log(elem);
             elem.nextElementSibling.remove();
         }
     }

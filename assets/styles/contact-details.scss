@@ -2,23 +2,37 @@
 
 .contact-details {
   width: 100%;
+  @include paddingOutside;
+
   &__container {
     max-width: $widthContent;
     margin: 0 auto;
+
   }
   &__wrapper {
     margin-right: -20px;
     display: flex;
+    flex-wrap: wrap;
+    //@include paddingOutside;
+
   }
+
   &__column {
     margin-right: 20px;
-    &:nth-child(1) {
-      width: 40.43%;
-    }
-    &:nth-child(2) {
-      width: 57.45%;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 760px) {
+    &__column {
+      &:nth-child(1) {
+        width: 40.43%;
+      }
+      &:nth-child(2) {
+        width: 54.45%;
+      }
     }
   }
+
   &__item {
     padding-top: 120px;
   }
