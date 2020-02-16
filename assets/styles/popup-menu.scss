@@ -2,9 +2,18 @@
 @import "./modal-window.scss";
 @import "./button-close.scss";
 
-.popup-menu {
-  @include modal-window;
+.popup-thanks {
+  @include window-wrap;
+}
 
+.popup-menu {
+  @include window-wrap;
+  &_active-menu {
+    @include window-wrap_active-menu;
+  }
+  &__close-menu {
+    text-align: right;
+  }
   &__close-menu-btn {
     @include button-close;
   }
@@ -14,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include paddingOutside;
     a {
       font-size: 36px;
       font-family: $fontFirst;

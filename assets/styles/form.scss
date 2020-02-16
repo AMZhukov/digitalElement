@@ -79,11 +79,14 @@
     margin: 0;
     padding: 0;
   }
+  &_second-color-text {
+    color: $secondColor;
+  }
   &_size-m {
-    max-width: 600px;
+    max-width: 1000px;
   }
   &_modal-window {
-    @include modal-window;
+    @include window-wrap;
     &-close-menu-btn {
       @include button-close;
     }

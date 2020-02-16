@@ -112,6 +112,12 @@ module.exports = {
                 to: path.resolve(__dirname, 'dist')
             }
         ]),
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, 'server.php'),
+                to: path.resolve(__dirname, 'dist')
+            }
+        ]),
         new MiniCssExtractPlugin({
             filename: fileName('css')
         })
@@ -132,7 +138,18 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
+                use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                esModule: false
+                            }
+                        }
+                    ],
+            },
+            {
+                test: /\.html$/,
+                loader: ['html-loader']
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,

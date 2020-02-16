@@ -22,7 +22,15 @@ import modalWindows from './modules/modalWindows';
 import animate from './modules/animatePeople';
 
 
-sendForm('form');
+
+if (document.querySelector('.modal-window')) {
+    sendForm('form', '.modal-window', 'modal-window_display');
+}
+
+else if (document.querySelector('form')) {
+    sendForm('form', '.modal-window');
+}
+
 if (document.querySelector('#form')) {
     const validator1 = new Validator({
         selector: '#form',
@@ -42,17 +50,21 @@ if (document.querySelector('#form')) {
             ],
             'text': [
                 ['notEmpty'],
-                ['pattern', 'nameAndText']
+                ['pattern', 'nameAndTextAndDigits']
             ],
         }
     });
     validator1.init();
 }
-
-modalWindows('.header__button-menu', '.popup-menu', '.popup-menu__close-menu-btn', '.popup-menu');
-
-modalWindows('.footer__callback-link', '.callback-form', '.callback-form__close-menu-btn', '.footer__callback-form');
-
+if (document.querySelector('.header__button-menu')) {
+    modalWindows('.header__button-menu', '.popup-menu', '.popup-menu__close-menu-btn', '.popup-menu', 'popup-menu_active-menu');
+}
+if (document.querySelector('.footer__callback-link')) {
+    modalWindows('.footer__callback-link', '.modal-window', '.modal-window__close-menu-btn', '.modal-window__form-wrapper', 'modal-window_display');
+}
+if (document.querySelector('.popup-thanks')) {
+    modalWindows(null, '.popup-thanks', '.popup-menu__close-menu-btn', '.popup-thanks', 'popup-menu_active-menu');
+}
 
 if (document.querySelector('.illustration')) {
     animate('.illustration__man', 'animate');

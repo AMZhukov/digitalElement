@@ -1,6 +1,7 @@
 @mixin button-close {
+  display: inline-block;
   text-align: right;
-  top: -30px;
+  right: 0;
   padding-top: 5px;
   padding-right: 15px;
   cursor: pointer;

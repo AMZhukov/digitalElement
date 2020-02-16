@@ -117,6 +117,9 @@ class Validator{
             // this.pattern.nameAndText = (/^[А-ЯЁ ]*$/i); //форма для только русских слов с пробелами
             this.pattern.nameAndText = (/^[A-Z ]*$/i); //форма для только английских слов с пробелами
         }
+        if (!this.pattern.nameAndTextAndDigits) {
+            this.pattern.nameAndTextAndDigits = (/.|\n/); //форма для любых букв
+        }
         if (!this.pattern.check1) {
             this.pattern.check1 = 'checked'; //данную форму можно не заполнять, т.к. алгоритм сам определит checkbox
         }

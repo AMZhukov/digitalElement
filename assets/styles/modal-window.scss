@@ -1,8 +1,11 @@
-@mixin modal-window {
+@import "./basic-options.scss";
+@import "./button-close.scss";
+
+@mixin window-wrap {
   flex-direction: column;
   position: fixed;
   background-image: linear-gradient(to right, $firstColor 0%, $thirdColor 100%);
-  width: 250px;
+  //width: 250px;
   z-index: 999;
   left: -50%;
   top: 50%;
@@ -10,8 +13,44 @@
   align-items: center;
   justify-content: center;
   transition: 1s;
-  &_active-menu {
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+@mixin window-wrap_active-menu {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-window {
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 9000;
+  text-align: left;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+  opacity: 0;
+  @include paddingOutside;
+  &__form-wrapper {
+    @include window-wrap;
+    @include window-wrap_active-menu;
+    max-width: 420px;
+    width: 100%;
+  }
+  &_display {
+    display: block;
+    opacity: 1;
+  }
+  &__close-menu {
+    text-align: right;
+  }
+  &__close-menu-btn {
+    @include button-close;
+    &-img {
+      display: inline-block;
+    }
   }
 }
