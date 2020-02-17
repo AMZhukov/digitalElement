@@ -19,25 +19,7 @@ $widthBetweenGrid: 20px;
 
 $widthBetweenGridPr: ($widthBetweenGrid / $widthContent * 100%);
 
-$grid1: ((1 * $widthGrid + 0 * $widthBetweenGrid) / $widthContent * 100%);
-$grid2: ((2 * $widthGrid + 1 * $widthBetweenGrid) / $widthContent * 100%);
-$grid3: ((3 * $widthGrid + 2 * $widthBetweenGrid) / $widthContent * 100%);
-$grid4: ((4 * $widthGrid + 3 * $widthBetweenGrid) / $widthContent * 100%);
-$grid5: ((5 * $widthGrid + 4 * $widthBetweenGrid) / $widthContent * 100%);
-$grid6: ((6 * $widthGrid + 5 * $widthBetweenGrid) / $widthContent * 100%);
-$grid7: ((7 * $widthGrid + 6 * $widthBetweenGrid) / $widthContent * 100%);
-$grid8: ((8 * $widthGrid + 7 * $widthBetweenGrid) / $widthContent * 100%);
-$grid9: ((9 * $widthGrid + 8 * $widthBetweenGrid) / $widthContent * 100%);
-$grid10: ((10 * $widthGrid + 9 * $widthBetweenGrid) / $widthContent * 100%);
-$grid11: ((11 * $widthGrid + 10 * $widthBetweenGrid) / $widthContent * 100%);
-$grid12: ((12 * $widthGrid + 11 * $widthBetweenGrid) / $widthContent * 100%);
-
-
 @mixin paddingOutside {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-@mixin columnNumber {
-
 }
